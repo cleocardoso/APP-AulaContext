@@ -11,13 +11,14 @@ export function Home({ navigation }) {
   return (
 
     <View style={GlobalStyles.screenContainer}>
+    
       <View>
-        <Text style={styles.text1}>Nome:{nome}</Text>
-        <Text style={styles.text1}>CPF:{cpf}</Text>
-        <Text style={styles.text1}>E-mail:{email}</Text>
-        <Text style={styles.text1}>Nivel Escolar:{nivelEsc}</Text>
-        <Text style={styles.text1}>Idioma:{idioma}</Text>
-        <Text style={styles.text1}>Experiência:{experiencia}</Text>
+        <Text style={styles.text1}>Nome: {nome}</Text>
+        <Text style={styles.text1}>CPF: {cpf}</Text>
+        <Text style={styles.text1}>E-mail: {email}</Text>
+        <Text style={styles.text1}>Nivel Escolar: {nivelEsc}</Text>
+        <Text style={styles.text1}>Idioma: {idioma}</Text>
+        <Text style={styles.text1}>Experiência: {experiencia}</Text>
       </View>
 
     </View>
@@ -44,11 +45,11 @@ const styles = StyleSheet.create({
 
   },
   text1: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
-    color: '#CD5C5C',
-    top:-100,
-    left:-50
+    color: 'black',
+    top:-200,
+    left:-4
   }
 
 })

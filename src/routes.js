@@ -21,7 +21,12 @@ export function Routes(){
                 fontWeight: 'bold',
                 textAlign: 'center'
             }, }}  />
-            <Stack.Screen name='Home' component={Home}  options={{ headerShown: false }}  />
+            <Stack.Screen name='Home' component={Home}  options={{  title: 'Dados do Usuario',headerTitleStyle: {
+                fontSize: 25,
+                color: '#CD5C5C',
+                fontWeight: 'bold',
+                textAlign: 'center'
+            },}}  />
         </Stack.Navigator>
     );
 }

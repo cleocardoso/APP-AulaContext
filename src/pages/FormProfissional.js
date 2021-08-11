@@ -1,21 +1,31 @@
-import React, { useContext} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useContext } from 'react';
+import { StyleSheet, View,TextInput } from 'react-native';
 import GlobalStyles from '../styles/GlobalStyles';
 import SimplesContext from '../contexts/SimplesProvider';
-import { Inputt } from '../components/Inputt'; 
+import { Inputt } from '../components/Inputt';
 import { MainButton } from '../components/MainButton';
 
 
 export function FormProfissional({ navigation }) {
-    const {nivelEsc,setNivelEsc,idioma,setIdioma,experiencia,setExperiencia} = useContext(SimplesContext)
+  const { nivelEsc, setNivelEsc, idioma, setIdioma, experiencia, setExperiencia } = useContext(SimplesContext)
   return (
 
     <View style={GlobalStyles.screenContainer}>
-     
+
       <Inputt placeholder="Nivel de Escolaridade" value={nivelEsc} onChangeText={x => setNivelEsc(x)}></Inputt>
       <Inputt placeholder="Idioma" value={idioma} onChangeText={x => setIdioma(x)}></Inputt>
-      <Inputt placeholder="Experiência" value={experiencia} onChangeText={x => setExperiencia(x)}></Inputt>
-      <MainButton title="Salvar" onPress={() => navigation.navigate('Home')}/>
+      <View style={styles.textAreaContainer} >
+        <TextInput
+          style={styles.textArea}
+          placeholder="Experiência"
+          placeholderTextColor="grey"
+          numberOfLines={10}
+          multiline={true}
+          value={experiencia} onChangeText={x => setExperiencia(x)}
+        />
+      </View>
+           
+      <MainButton title="Salvar" onPress={() => navigation.navigate('Home')} />
 
     </View>
 
@@ -41,33 +51,24 @@ const styles = StyleSheet.create({
 
   },
 
-  button: {
-    width: 150,
-    height: 30,
-    left: -115,
-    borderRadius: 5,
-    top: -30
-  },
-
-  button2: {
-    width: 160,
-    height: 30,
-    left: 80,
-    top: -60,
-    borderRadius: 5,
-    alignContent: 'center'
-  },
-  text: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#5CC6BA',
-    textAlign: 'center'
-  },
   text1: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#5CC6BA',
     textAlign: 'center'
-  }
+  },
+  textAreaContainer: {
+    borderColor: '#CD5C5C',
+    borderWidth: 2,
+    top:-40,
+    borderRadius:12,
+    left:-5
+    
+  },
+  textArea: {
+    height: 100,
+    width:305
+  },
+
 
 })
