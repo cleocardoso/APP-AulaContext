@@ -14,9 +14,9 @@ export function FormPessoal({ navigation }) {
 
     <View style={GlobalStyles.screenContainer}>
      
-      <Inputt placeholder="Nome" ></Inputt>
-      <Inputt placeholder="CPF" keyboardType='numeric'></Inputt>
-      <Inputt placeholder="E-mail" ></Inputt>
+      <Inputt placeholder="Nome" value={nome} onChangeText={x => setNome(x)}></Inputt>
+      <Inputt placeholder="CPF" value={cpf} onChangeText={x => setCpf(x)} keyboardType='numeric'></Inputt>
+      <Inputt placeholder="E-mail" value={email} onChangeText={x => setEmail(x)}></Inputt>
       <MainButton title="Próximo" onPress={() => navigation.navigate('FormProfissional')}/>
 
     </View>

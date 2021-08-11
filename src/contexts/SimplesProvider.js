@@ -10,7 +10,8 @@ export function SimplesProvider({ children }){
     const[idioma, setIdioma] = useState('')
     const[experiencia, setExperiencia] = useState('')
     return(
-        <SimplesContext.Provider value={{nome,setNome,email,setEmail,cpf,setCpf,nivelEsc,setNivelEsc,idioma,setIdioma,experiencia,setExperiencia}}>
+        <SimplesContext.Provider value={{nome,setNome,email,setEmail,
+        cpf,setCpf,nivelEsc,setNivelEsc,idioma,setIdioma,experiencia,setExperiencia}}>
             { children }
         </SimplesContext.Provider>
     )

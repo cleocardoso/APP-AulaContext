@@ -7,12 +7,18 @@ import SimplesContext from '../contexts/SimplesProvider'
 
 
 export function Home({ navigation }) {
-    const {user} = useContext(SimplesContext)
+  const { nome, cpf, email, nivelEsc, idioma, experiencia } = useContext(SimplesContext)
   return (
 
     <View style={GlobalStyles.screenContainer}>
-      <Text>Home:{user}</Text>
-
+      <View>
+        <Text style={styles.text1}>Nome:{nome}</Text>
+        <Text style={styles.text1}>CPF:{cpf}</Text>
+        <Text style={styles.text1}>E-mail:{email}</Text>
+        <Text style={styles.text1}>Nivel Escolar:{nivelEsc}</Text>
+        <Text style={styles.text1}>Idioma:{idioma}</Text>
+        <Text style={styles.text1}>Experiência:{experiencia}</Text>
+      </View>
 
     </View>
 
@@ -37,34 +43,12 @@ const styles = StyleSheet.create({
     left: -95,
 
   },
-
-  button: {
-    width: 150,
-    height: 30,
-    left: -115,
-    borderRadius: 5,
-    top: -30
-  },
-
-  button2: {
-    width: 160,
-    height: 30,
-    left: 80,
-    top: -60,
-    borderRadius: 5,
-    alignContent: 'center'
-  },
-  text: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#5CC6BA',
-    textAlign: 'center'
-  },
   text1: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#5CC6BA',
-    textAlign: 'center'
+    color: '#CD5C5C',
+    top:-100,
+    left:-50
   }
 
 })

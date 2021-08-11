@@ -12,10 +12,10 @@ export function FormProfissional({ navigation }) {
 
     <View style={GlobalStyles.screenContainer}>
      
-      <Inputt placeholder="Nivel de Escolaridade" ></Inputt>
-      <Inputt placeholder="Idioma" ></Inputt>
-      <Inputt placeholder="Experiência" ></Inputt>
-      <MainButton title="Salvar"/>
+      <Inputt placeholder="Nivel de Escolaridade" value={nivelEsc} onChangeText={x => setNivelEsc(x)}></Inputt>
+      <Inputt placeholder="Idioma" value={idioma} onChangeText={x => setIdioma(x)}></Inputt>
+      <Inputt placeholder="Experiência" value={experiencia} onChangeText={x => setExperiencia(x)}></Inputt>
+      <MainButton title="Salvar" onPress={() => navigation.navigate('Home')}/>
 
     </View>
 
